@@ -1,7 +1,7 @@
 ﻿.*
 !.gitignore
 #工具
-/.idea
+#/.idea
 
 #忽略node_modules
 node_modules/

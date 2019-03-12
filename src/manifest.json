@@ -4,7 +4,7 @@
   "versionName": "1.0.0",
   "versionCode": "1",
   "minPlatformVersion": "101",
-  "icon": "/Common/logo.png",
+  "icon": "/Common/Images/icn/logo-hsir.png",
   "features": [
     {
       "name": "system.prompt"
@@ -25,12 +25,21 @@
     "logLevel": "off"
   },
   "router": {
-    "entry": "Demo",
+    "entry": "Hsir",
     "pages": {
+      "Hsir":{
+        "component": "index"
+      },
       "Login/Register":{
         "component": "index"
       },
       "Login/Login": {
+        "component": "index"
+      },
+      "Content/List": {
+        "component": "index"
+      },
+      "Content/Detail": {
         "component": "index"
       },
 
@@ -68,7 +77,11 @@
       },
       "About": {
         "menu": false
-      }
+      },
+      "Hsir":{
+        "titleBar":false,
+        "fullScreen":true
+      }}
     }
   },
   "subpackages":[
