@@ -25,7 +25,7 @@
     "logLevel": "off"
   },
   "router": {
-    "entry": "Hsir",
+    "entry": "Content/Detail",
     "pages": {
       "Hsir":{
         "component": "index"
@@ -81,8 +81,23 @@
       "Hsir":{
         "titleBar":false,
         "fullScreen":true
-      }}
+      },
+      "Login/Login":{
+        "titleBarText": "登录页"
+      },
+      "Login/Register":{
+        "titleBarText": "注册页"
+      },
+      "Content/List": {
+        "titleBar":false,
+        "fullScreen":true
+      },
+      "Content/Detail": {
+        "titleBar":false,
+        "fullScreen":true
+      }
     }
+
   },
   "subpackages":[
     {

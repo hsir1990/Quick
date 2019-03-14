@@ -1,0 +1,245 @@
+<template>
+<div class="box">
+    <div>
+        <text class="top-left"></text>
+        <text class="top-mid">重磅推荐</text>
+        <a href="/">首页</a>
+    </div>
+    <list class="content" scrollpage="true">
+            <block class="content-block">
+                <list-item type="product">
+                    <image src="../../Common/Images/list1.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list2.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list3.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list1.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list2.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list3.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item>
+                <list-item type="product">
+                    <image src="../../Common/Images/list1.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list2.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item> 
+                <list-item type="product">
+                    <image src="../../Common/Images/list3.jpg"></image>
+                    <div>
+                        <div class="top-list">
+                            <div class="left">
+                                <text class="left-title">透视小毒医</text>
+                                <text class="left-fu">无敌贱客</text>
+                            </div>
+                            <div class="right">
+                                <text>立即阅读</text>
+                            </div>
+                        </div>
+                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                    </div>
+                </list-item>
+            </block>
+            <!-- 加载更多，type属性自定义命名为loadMore -->
+            <list-item type="loadMore" class="load-more">
+                <progress type="circular"></progress>
+                <text>加载更多</text>
+            </list-item>
+        </list>
+</div>
+</template>
+
+<style lang="less" scoped>
+    @import '../../Common/Less/style.less';
+.box{
+    .column;
+    >div{
+        .row;
+        align-items: center;
+        height: 100px;
+        .border-bottom(2px, #cbcbcb);
+        .top-left{
+            width: 60px;
+            height: 100px;
+            .img(url("../../Common/Images/arrow.png"));
+            background-size: 20px 40px;
+            transform:rotate(180deg);
+        };
+        .top-mid{
+            flex: 1;
+                text-align: center;
+                color: #333;
+                font-size: 34px;
+        };
+        a{
+            color: #999;
+            font-size: 24px;
+            text-align: center;
+            margin-right:20px;
+        };
+    };
+   .content{
+        .column;
+            list-item{
+                .row;
+                height: 220px;
+                margin: 0 20px;
+                padding: 30px 0;
+                .border-bottom(2px, rgb(239,239,239));
+                image{
+                    width: 120px;
+                    height: 160px;
+                    margin-right: 20px;
+                }
+                >div{
+                    .column;
+                    .top-list{
+                        .row;
+                        .left{
+                            flex:1;
+                            .column;
+                            .left-title{
+                                font-size: 30px;
+                                color: #333;
+                            };
+                            .left-fu{
+                                font-size: 24px;
+                                color: #999;
+                                margin-top: 16px;
+                            }
+                        }
+                        .right{
+                            padding:0 16px;
+                            .border(2px, #d2d6d8 );
+                            background-color: #f3f3f3; 
+                            border-radius: 6px;
+                            height: 56px;
+                            line-height: 56px;
+                        }
+                    };
+                    .bot{
+                        margin-top:10px;
+                        font-size: 24px;
+                        color: #999;
+                         text{
+                            lines: 2;
+                            text-overflow:ellipsis;
+                         }
+                    };
+                }
+            };
+            .load-more{
+                .column;
+                justify-content: center;
+                text{
+                    text-align: center;
+                }
+            }
+        
+    }; 
+}
+</style>
+

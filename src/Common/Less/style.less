@@ -3,11 +3,31 @@
     font-family: myfont;
     src: url("http://www.example.com/myfont.ttf");
 };
+*{
+    margin: 0;
+    padding: 0;
+}
 .column{
     display: flex;
-    display-direction: column;
+    flex-direction: column;
 }
 .row{
     display: flex;
-    display-direction: row;
+    flex-direction: row;
+}
+.img(@url){
+    background-image:@url;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+.border-bottom(@width, @color){
+    border-bottom-width: @width;
+    border-bottom-color:  @color;
+    border-style: solid;
+}
+.border(@width, @color){
+    border-width: @width;
+    border-color:  @color;
+    border-style: solid;
 }

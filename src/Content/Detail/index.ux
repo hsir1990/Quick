@@ -1,0 +1,52 @@
+<template>
+    <div>
+        <div>
+            <text></text>
+            <text>重磅推荐</text>
+            <a href="/">重磅推荐</a>
+        </div>
+        <div>
+            <image src="../Common/Images/list1.jpg"></image>
+            <div>
+                <text>透视小毒医</text>
+                <text>畅销 - 作者：周大少</text>
+                <text>连载(共2361章)</text>
+            </div>
+            <rating></rating>
+        </div>
+        <div>
+            <text>免费试读</text>
+            <text>下载app，看全站免费</text>
+        </div>
+        <div>
+            <text>最新</text>
+            <text>第二十一卷_第2360章 授业恩师</text>
+            <text>17小时前</text>
+        </div>
+        <tabs>
+            <tab-bar>
+                <text>简介</text>
+                <text>目录</text>
+            </tab-bar>
+            <tab-content>
+            <stack>
+                    <div>
+                        <text>王兵只是个小保安，直到那天他遇到了丧尽天良的师父，从此他的人生轨迹发生了翻天覆地的变化。美女，你信不信只要我亲你一下，就能知道你穿什么样的内裤？什么？你不信？那我只能证明给你看了。</text>
+                        <text>授权方：酷匠网</text>
+                    </div>
+                </stack>
+                <stack>
+                    <div>
+                        <text>第一卷_第1章 这里又没别人，你就别装了</text>
+                    </div>
+                    <div>
+                        <text>第一卷_第1章 这里又没别人，你就别装了</text>
+                    </div>
+                    <div>
+                        <text>第一卷_第1章 这里又没别人，你就别装了</text>
+                    </div>
+                </stack>
+            </tab-content>
+        </tabs>
+    </div>
+</template>
