@@ -1,20 +1,96 @@
 <template>
-<div>
-    <div>
-        <image src="../Common/Images/icn/logo-hsir.png"></image>
-        <div>
-            <input type="text">
-            <div>
-                <input type="text" placeholder="请输入短信验证码">
+<div class="box">
+    <div class="top">
+        <image src="../../Common/Images/icn/logo-hsir.png"></image>
+        <div class="content">
+            <input type="text" class="phone"  placeholder="请输入手机号">
+            <div class="operation-code">
+                <input type="text" class="code"  placeholder="请输入短信验证码">
                 <text>获取验证码</text>
             </div>
             
-            <input type="button" value="登陆"> 
+            <input type="button" class="btn" value="登录"> 
         </div>
     </div>
-    <div>
-        <text>微信登陆</text>
-        <text>QQ登陆</text>
+    <div  class="bot">
+        <text>微信登录</text>
+        <text>QQ登录</text>
     </div>
 </div>
 </template>
+<style lang="less" scoped>
+@import '../../Common/Less/style.less';
+.box{
+    .column;
+    .top{
+        .column;
+        image{
+            /* column的时候让自己居中 */
+            align-self:center;
+            width: 160px;
+            height: 160px;
+            margin-top: 120px;
+            margin-bottom:100px;
+        };
+        .content{
+            .column;
+            padding: 0 90px;
+            .phone{
+                height: 110px;
+                line-height: 70px;
+                font-size: 36px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                .border-bottom(2px, #e6e6e6);
+                .img(url("../../Common/Images/close.png"));
+                background-size: 39px 39px;
+                background-position: right center;   
+            };
+            .operation-code{
+                .row;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                .border-bottom(2px, #e6e6e6);
+                line-height: 40px;
+                .code{
+                    flex: 1;
+                }
+                >text{
+                    font-size: 30px;
+                    color: #df3d3d;
+                    padding-left:30px; 
+                    .border-left(2px, #e6e6e6);
+                }
+            };
+            .btn{
+                background-color: #df3d3d;
+                width: 80rem;
+                text-align: center;
+                line-height: 80px;
+                width: 100%;
+                border: none;
+                border-radius: 6px;
+                color: #fff;
+                font-size: 32px;
+                margin-top: 60px;
+            }
+        };
+    };
+    .bot{
+        position: fixed;
+        bottom: 0;
+        .column;
+        text{
+            color: #2c85ff;
+            background-color: #fff;
+            .border-top(2px, #e6e6e6);
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 80px;
+            height: 80px;
+        }
+    };
+
+}
+</style>

@@ -89,6 +89,1509 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Content/Detail/index.ux?uxType=page":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Content/Detail/index.ux?uxType=page ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "@FONT-FACE": {
+    "myfont": {
+      "fontName": "myfont",
+      "fontSrc": [
+        "http://www.example.com/myfont.ttf"
+      ]
+    }
+  },
+  ".column": {
+    "display": "flex",
+    "flexDirection": "column"
+  },
+  ".row": {
+    "display": "flex",
+    "flexDirection": "row"
+  },
+  ".box": {
+    "display": "flex",
+    "flexDirection": "column"
+  },
+  ".box .title-bar": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "height": "100px",
+    "borderBottomWidth": "2px",
+    "borderBottomColor": "#cbcbcb",
+    "borderStyle": "solid",
+    "backgroundColor": "#f7f7f7",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "title-bar"
+        }
+      ]
+    }
+  },
+  ".box .title-bar .top-left": {
+    "width": "60px",
+    "height": "100px",
+    "backgroundImage": "/Common/Images/arrow.png",
+    "backgroundSize": "20px 40px",
+    "backgroundRepeat": "no-repeat",
+    "backgroundPosition": "center center",
+    "transform": "{\"rotate\":\"180deg\"}",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "title-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "top-left"
+        }
+      ]
+    }
+  },
+  ".box .title-bar .top-mid": {
+    "flex": 1,
+    "textAlign": "center",
+    "color": "#333333",
+    "fontSize": "34px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "title-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "top-mid"
+        }
+      ]
+    }
+  },
+  ".box .title-bar a": {
+    "color": "#999999",
+    "fontSize": "24px",
+    "textAlign": "center",
+    "marginRight": "20px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "title-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "a"
+        }
+      ]
+    }
+  },
+  ".box .book": {
+    "display": "flex",
+    "flexDirection": "row",
+    "paddingTop": "30px",
+    "paddingRight": "20px",
+    "paddingBottom": "20px",
+    "paddingLeft": "20px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        }
+      ]
+    }
+  },
+  ".box .book image": {
+    "width": "160px",
+    "height": "200px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "image"
+        }
+      ]
+    }
+  },
+  ".box .book > div": {
+    "display": "flex",
+    "flexDirection": "column",
+    "marginLeft": "20px",
+    "flex": 1,
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        }
+      ]
+    }
+  },
+  ".box .book > div .title": {
+    "fontSize": "32px",
+    "color": "#2e343f",
+    "marginBottom": "16px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "title"
+        }
+      ]
+    }
+  },
+  ".box .book > div .author": {
+    "fontSize": "24px",
+    "color": "#666666",
+    "marginBottom": "16px",
+    "marginTop": "10px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "author"
+        }
+      ]
+    }
+  },
+  ".box .book > div .catalog": {
+    "fontSize": "24px",
+    "color": "#666666",
+    "marginBottom": "16px",
+    "marginTop": "10px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "catalog"
+        }
+      ]
+    }
+  },
+  ".box .book > text": {
+    "marginTop": "10px",
+    "width": "36px",
+    "height": "32px",
+    "backgroundImage": "/Common/Images/header.png",
+    "backgroundSize": "100% 100%",
+    "backgroundRepeat": "no-repeat",
+    "backgroundPosition": "center center",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "text"
+        }
+      ]
+    }
+  },
+  ".box .book-bar": {
+    "display": "flex",
+    "flexDirection": "row",
+    "paddingTop": "0px",
+    "paddingRight": "25px",
+    "paddingBottom": "0px",
+    "paddingLeft": "25px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book-bar"
+        }
+      ]
+    }
+  },
+  ".box .book-bar .free": {
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "height": "64px",
+    "lineHeight": "64px",
+    "borderTopWidth": "2px",
+    "borderRightWidth": "2px",
+    "borderBottomWidth": "2px",
+    "borderLeftWidth": "2px",
+    "borderTopColor": "#aaaaaa",
+    "borderRightColor": "#aaaaaa",
+    "borderBottomColor": "#aaaaaa",
+    "borderLeftColor": "#aaaaaa",
+    "borderStyle": "solid",
+    "borderRadius": "6px",
+    "textAlign": "center",
+    "marginRight": "20px",
+    "flex": 1,
+    "fontSize": "30px",
+    "color": "#555555",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "free"
+        }
+      ]
+    }
+  },
+  ".box .book-bar .free .icon": {
+    "backgroundImage": "/Common/Images/book.png",
+    "backgroundSize": "100% 100%",
+    "backgroundRepeat": "no-repeat",
+    "backgroundPosition": "center center",
+    "width": "40px",
+    "height": "40px",
+    "marginRight": "10px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "free"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "icon"
+        }
+      ]
+    }
+  },
+  ".box .book-bar .down": {
+    "display": "flex",
+    "flexDirection": "row",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "flex": 2,
+    "fontSize": "30px",
+    "height": "64px",
+    "lineHeight": "64px",
+    "color": "#ffffff",
+    "backgroundColor": "#d3270f",
+    "borderRadius": "6px",
+    "textAlign": "center",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "down"
+        }
+      ]
+    }
+  },
+  ".box .book-bar .down .icon": {
+    "backgroundImage": "/Common/Images/arrow-down.png",
+    "backgroundSize": "100% 100%",
+    "backgroundRepeat": "no-repeat",
+    "backgroundPosition": "center center",
+    "width": "40px",
+    "height": "40px",
+    "marginRight": "10px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "down"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "icon"
+        }
+      ]
+    }
+  },
+  ".box .book-bar .down text": {
+    "color": "#ffffff",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "book-bar"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "down"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "text"
+        }
+      ]
+    }
+  },
+  ".box .tip": {
+    "display": "flex",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "borderTopWidth": "2px",
+    "borderTopColor": "#efefef",
+    "height": "80px",
+    "marginTop": "30px",
+    "borderBottomWidth": "20px",
+    "borderBottomColor": "#b8b8b8",
+    "borderStyle": "solid",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip"
+        }
+      ]
+    }
+  },
+  ".box .tip .tip-left": {
+    "width": "76px",
+    "height": "36px",
+    "backgroundColor": "#8bc118",
+    "borderTopRightRadius": "6px",
+    "derBottomRightRadius": "6px",
+    "lineHeight": "36px",
+    "textAlign": "center",
+    "fontSize": "24px",
+    "color": "#ffffff",
+    "marginRight": "10px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip-left"
+        }
+      ]
+    }
+  },
+  ".box .tip .tip-mid": {
+    "flex": 1,
+    "fontSize": "28px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip-mid"
+        }
+      ]
+    }
+  },
+  ".box .tip .tip-right": {
+    "fontSize": "20px",
+    "color": "#9f9f9f",
+    "marginTop": "0px",
+    "marginRight": "20px",
+    "marginBottom": "0px",
+    "marginLeft": "20px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "tip-right"
+        }
+      ]
+    }
+  },
+  ".box .content": {
+    "display": "flex",
+    "flexDirection": "column",
+    "paddingTop": "0px",
+    "paddingRight": "40px",
+    "paddingBottom": "0px",
+    "paddingLeft": "40px",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        }
+      ]
+    }
+  },
+  ".box .content .con-title": {
+    "display": "flex",
+    "flexDirection": "row",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title"
+        }
+      ]
+    }
+  },
+  ".box .content .con-title .con-title-left": {
+    "flex": 1,
+    "borderTopWidth": "2px",
+    "borderRightWidth": "0px",
+    "borderBottomWidth": "2px",
+    "borderLeftWidth": "2px",
+    "borderTopColor": "#b8b8b8",
+    "borderRightColor": "#b8b8b8",
+    "borderBottomColor": "#b8b8b8",
+    "borderLeftColor": "#b8b8b8",
+    "borderStyle": "solid",
+    "textAlign": "center",
+    "fontSize": "30px",
+    "color": "#666666",
+    "lineHeight": "70px",
+    "backgroundColor": "#b8b8b8",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title-left"
+        }
+      ]
+    }
+  },
+  ".box .content .con-title .active": {
+    "color": "#ff0020",
+    "backgroundColor": "#ffffff",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "active"
+        }
+      ]
+    }
+  },
+  ".box .content .con-title .con-title-right": {
+    "flex": 1,
+    "textAlign": "center",
+    "fontSize": "30px",
+    "color": "#666666",
+    "lineHeight": "70px",
+    "borderTopWidth": "2px",
+    "borderRightWidth": "2px",
+    "borderBottomWidth": "2px",
+    "borderLeftWidth": "2px",
+    "borderTopColor": "#b8b8b8",
+    "borderRightColor": "#b8b8b8",
+    "borderBottomColor": "#b8b8b8",
+    "borderLeftColor": "#b8b8b8",
+    "borderStyle": "solid",
+    "backgroundColor": "#b8b8b8",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title-right"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con": {
+    "marginTop": "15px",
+    "display": "flex",
+    "flexDirection": "column",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-left": {
+    "display": "flex",
+    "flexDirection": "column",
+    "width": "100%",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-left"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-left div": {
+    "display": "flex",
+    "flexDirection": "column",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-left"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-left div .con-con-nei": {
+    "fontSize": "24px",
+    "color": "#333333",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-left"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-nei"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-left div .con-con-find": {
+    "fontSize": "20px",
+    "color": "#9f9f9f",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-left"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-find"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-right": {
+    "width": "100%",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-right"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-right > div": {
+    "display": "flex",
+    "flexDirection": "column",
+    "width": "100%",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-right"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        }
+      ]
+    }
+  },
+  ".box .content .con-con .con-con-right > div div": {
+    "marginLeft": "10px",
+    "marginRight": "10px",
+    "borderBottomWidth": "1px",
+    "borderBottomColor": "#efefef",
+    "borderStyle": "solid",
+    "paddingTop": "10px",
+    "paddingRight": "10px",
+    "paddingBottom": "10px",
+    "paddingLeft": "10px",
+    "width": "100%",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-con-right"
+        },
+        {
+          "t": "child"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "t",
+          "n": "div"
+        }
+      ]
+    }
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Content/Detail/index.ux?uxType=page":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Content/Detail/index.ux?uxType=page ***!
@@ -99,26 +1602,38 @@
 module.exports = {
   "type": "div",
   "attr": {},
+  "classList": [
+    "box"
+  ],
   "children": [
     {
       "type": "div",
       "attr": {},
+      "classList": [
+        "title-bar"
+      ],
       "children": [
         {
           "type": "text",
-          "attr": {}
+          "attr": {},
+          "classList": [
+            "top-left"
+          ]
         },
         {
           "type": "text",
           "attr": {
-            "value": "重磅推荐"
-          }
+            "value": "书籍详情"
+          },
+          "classList": [
+            "top-mid"
+          ]
         },
         {
           "type": "a",
           "attr": {
             "href": "/",
-            "value": "重磅推荐"
+            "value": "书架"
           }
         }
       ]
@@ -126,11 +1641,14 @@ module.exports = {
     {
       "type": "div",
       "attr": {},
+      "classList": [
+        "book"
+      ],
       "children": [
         {
           "type": "image",
           "attr": {
-            "src": "../Common/Images/list1.jpg"
+            "src": "../../Common/Images/list1.jpg"
           }
         },
         {
@@ -141,24 +1659,33 @@ module.exports = {
               "type": "text",
               "attr": {
                 "value": "透视小毒医"
-              }
+              },
+              "classList": [
+                "title"
+              ]
             },
             {
               "type": "text",
               "attr": {
                 "value": "畅销 - 作者：周大少"
-              }
+              },
+              "classList": [
+                "author"
+              ]
             },
             {
               "type": "text",
               "attr": {
                 "value": "连载(共2361章)"
-              }
+              },
+              "classList": [
+                "catalog"
+              ]
             }
           ]
         },
         {
-          "type": "rating",
+          "type": "text",
           "attr": {}
         }
       ]
@@ -166,74 +1693,140 @@ module.exports = {
     {
       "type": "div",
       "attr": {},
+      "classList": [
+        "book-bar"
+      ],
       "children": [
         {
-          "type": "text",
-          "attr": {
-            "value": "免费试读"
-          }
+          "type": "div",
+          "attr": {},
+          "classList": [
+            "free"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "attr": {},
+              "classList": [
+                "icon"
+              ]
+            },
+            {
+              "type": "text",
+              "attr": {
+                "value": "免费试读"
+              }
+            }
+          ]
         },
         {
-          "type": "text",
-          "attr": {
-            "value": "下载app，看全站免费"
-          }
+          "type": "div",
+          "attr": {},
+          "classList": [
+            "down"
+          ],
+          "children": [
+            {
+              "type": "text",
+              "attr": {},
+              "classList": [
+                "icon"
+              ]
+            },
+            {
+              "type": "text",
+              "attr": {
+                "value": "下载app，看全站免费"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "type": "div",
       "attr": {},
+      "classList": [
+        "tip"
+      ],
       "children": [
         {
           "type": "text",
           "attr": {
             "value": "最新"
-          }
+          },
+          "classList": [
+            "tip-left"
+          ]
         },
         {
           "type": "text",
           "attr": {
             "value": "第二十一卷_第2360章 授业恩师"
-          }
+          },
+          "classList": [
+            "tip-mid"
+          ]
         },
         {
           "type": "text",
           "attr": {
             "value": "17小时前"
-          }
+          },
+          "classList": [
+            "tip-right"
+          ]
         }
       ]
     },
     {
       "type": "tabs",
       "attr": {},
+      "classList": [
+        "content"
+      ],
       "children": [
         {
           "type": "tab-bar",
           "attr": {},
+          "classList": [
+            "con-title"
+          ],
           "children": [
             {
               "type": "text",
               "attr": {
                 "value": "简介"
-              }
+              },
+              "classList": [
+                "con-title-left",
+                "active"
+              ]
             },
             {
               "type": "text",
               "attr": {
                 "value": "目录"
-              }
+              },
+              "classList": [
+                "con-title-right"
+              ]
             }
           ]
         },
         {
           "type": "tab-content",
           "attr": {},
+          "classList": [
+            "con-con"
+          ],
           "children": [
             {
               "type": "stack",
               "attr": {},
+              "classList": [
+                "con-con-left"
+              ],
               "children": [
                 {
                   "type": "div",
@@ -243,13 +1836,19 @@ module.exports = {
                       "type": "text",
                       "attr": {
                         "value": "王兵只是个小保安，直到那天他遇到了丧尽天良的师父，从此他的人生轨迹发生了翻天覆地的变化。美女，你信不信只要我亲你一下，就能知道你穿什么样的内裤？什么？你不信？那我只能证明给你看了。"
-                      }
+                      },
+                      "classList": [
+                        "con-con-nei"
+                      ]
                     },
                     {
                       "type": "text",
                       "attr": {
                         "value": "授权方：酷匠网"
-                      }
+                      },
+                      "classList": [
+                        "con-con-find"
+                      ]
                     }
                   ]
                 }
@@ -258,40 +1857,49 @@ module.exports = {
             {
               "type": "stack",
               "attr": {},
+              "classList": [
+                "con-con-right"
+              ],
               "children": [
                 {
                   "type": "div",
                   "attr": {},
                   "children": [
                     {
-                      "type": "text",
-                      "attr": {
-                        "value": "第一卷_第1章 这里又没别人，你就别装了"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "attr": {
+                            "value": "第一卷_第1章 这里又没别人，你就别装了"
+                          }
+                        }
+                      ]
+                    },
                     {
-                      "type": "text",
-                      "attr": {
-                        "value": "第一卷_第1章 这里又没别人，你就别装了"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "attr": {
+                            "value": "第一卷_第2章 这里又没别人，你就别装了"
+                          }
+                        }
+                      ]
+                    },
                     {
-                      "type": "text",
-                      "attr": {
-                        "value": "第一卷_第1章 这里又没别人，你就别装了"
-                      }
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "attr": {
+                            "value": "第一卷_第3章 这里又没别人，你就别装了"
+                          }
+                        }
+                      ]
                     }
                   ]
                 }
@@ -314,9 +1922,11 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var $app_template$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Content/Detail/index.ux?uxType=page")
+var $app_style$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!less-loader!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Content/Detail/index.ux?uxType=page")
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
      $app_module$.exports.template = $app_template$
+     $app_module$.exports.style = $app_style$
 })
 
 $app_bootstrap$('@app-component/index',{ packagerVersion: '0.0.5'})
