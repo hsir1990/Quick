@@ -1492,7 +1492,7 @@ module.exports = {
         {
           "type": "a",
           "attr": {
-            "href": "",
+            "href": "Content/List?bookid='110'",
             "value": "书架"
           },
           "classList": [
@@ -1615,6 +1615,9 @@ module.exports = {
         {
           "type": "div",
           "attr": {},
+          "events": {
+            "click": "routerLogin"
+          },
           "children": [
             {
               "type": "text",
@@ -1637,6 +1640,9 @@ module.exports = {
         {
           "type": "div",
           "attr": {},
+          "events": {
+            "click": "routerRegister"
+          },
           "children": [
             {
               "type": "text",
@@ -1789,6 +1795,9 @@ module.exports = {
                           "classList": [
                             "right"
                           ],
+                          "events": {
+                            "click": "routerDetail"
+                          },
                           "children": [
                             {
                               "type": "text",
@@ -1875,6 +1884,9 @@ module.exports = {
                           "classList": [
                             "right"
                           ],
+                          "events": {
+                            "click": "routerDetail"
+                          },
                           "children": [
                             {
                               "type": "text",
@@ -1961,6 +1973,9 @@ module.exports = {
                           "classList": [
                             "right"
                           ],
+                          "events": {
+                            "click": "routerDetail"
+                          },
                           "children": [
                             {
                               "type": "text",
@@ -2005,6 +2020,7 @@ module.exports = {
         {
           "type": "a",
           "attr": {
+            "href": "Content/List",
             "value": "更多重磅推荐"
           }
         }
@@ -2012,6 +2028,73 @@ module.exports = {
     }
   ]
 }
+
+/***/ }),
+
+/***/ "./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=f:\\work\\zongheng\\Quick\\node_modules\\hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Hsir/index.ux?uxType=page":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Hsir/index.ux?uxType=page ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module, exports, $app_require$){"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _system = _interopRequireDefault($app_require$("@app-module/system.router"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _default = {
+  routerDetail: function routerDetail() {
+    _system.default.push({
+      uri: '/Content/Detail'
+    });
+  },
+  routerLogin: function routerLogin() {
+    _system.default.push({
+      uri: '/Login/Login'
+    });
+  },
+  routerRegister: function routerRegister() {
+    _system.default.push({
+      uri: '/Login/Register'
+    });
+  }
+};
+exports.default = _default;
+var moduleOwn = exports.default || module.exports;
+var accessors = ['public', 'protected', 'private'];
+
+if (moduleOwn.data && accessors.some(function (acc) {
+  return moduleOwn[acc];
+})) {
+  throw new Error('页面VM对象中的属性data不可与"' + accessors.join(',') + '"同时存在，请使用private替换data名称');
+} else if (!moduleOwn.data) {
+  moduleOwn.data = {};
+  moduleOwn._descriptor = {};
+  accessors.forEach(function (acc) {
+    var accType = _typeof(moduleOwn[acc]);
+
+    if (accType === 'object') {
+      moduleOwn.data = Object.assign(moduleOwn.data, moduleOwn[acc]);
+
+      for (var name in moduleOwn[acc]) {
+        moduleOwn._descriptor[name] = {
+          access: acc
+        };
+      }
+    } else if (accType === 'function') {
+      console.warn('页面VM对象中的属性' + acc + '的值不能是函数，请使用对象');
+    }
+  });
+}}
 
 /***/ }),
 
@@ -2024,8 +2107,13 @@ module.exports = {
 
 var $app_template$ = __webpack_require__(/*! !../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Hsir/index.ux?uxType=page")
 var $app_style$ = __webpack_require__(/*! !../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!less-loader!../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Hsir/index.ux?uxType=page")
+var $app_script$ = __webpack_require__(/*! !../../node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!../../node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!../../node_modules/babel-loader?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!../../node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=f:\\work\\zongheng\\Quick\\node_modules\\hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Hsir/index.ux?uxType=page")
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
+     $app_script$($app_module$, $app_exports$, $app_require$)
+     if ($app_exports$.__esModule && $app_exports$.default) {
+            $app_module$.exports = $app_exports$.default
+        }
      $app_module$.exports.template = $app_template$
      $app_module$.exports.style = $app_style$
 })

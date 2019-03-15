@@ -911,853 +911,864 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
-  "type": "div",
-  "attr": {},
-  "classList": [
-    "box"
-  ],
+  "type": "refresh",
+  "attr": {
+    "refreshing": function () {return this.isRefreshing}
+  },
+  "events": {
+    "refresh": "refresh"
+  },
   "children": [
     {
       "type": "div",
       "attr": {},
-      "children": [
-        {
-          "type": "text",
-          "attr": {},
-          "classList": [
-            "top-left"
-          ]
-        },
-        {
-          "type": "text",
-          "attr": {
-            "value": "重磅推荐"
-          },
-          "classList": [
-            "top-mid"
-          ]
-        },
-        {
-          "type": "a",
-          "attr": {
-            "href": "/",
-            "value": "首页"
-          }
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "attr": {
-        "scrollpage": "true"
-      },
       "classList": [
-        "content"
+        "box"
       ],
       "children": [
         {
-          "type": "block",
+          "type": "div",
           "attr": {},
-          "classList": [
-            "content-block"
-          ],
           "children": [
             {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list1.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
+              "type": "text",
+              "attr": {},
+              "classList": [
+                "top-left"
               ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list2.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list3.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list1.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list2.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list3.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list1.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list2.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "list-item",
-              "attr": {
-                "type": "product"
-              },
-              "children": [
-                {
-                  "type": "image",
-                  "attr": {
-                    "src": "../../Common/Images/list3.jpg"
-                  }
-                },
-                {
-                  "type": "div",
-                  "attr": {},
-                  "children": [
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "top-list"
-                      ],
-                      "children": [
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "left"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "透视小毒医"
-                              },
-                              "classList": [
-                                "left-title"
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "无敌贱客"
-                              },
-                              "classList": [
-                                "left-fu"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "div",
-                          "attr": {},
-                          "classList": [
-                            "right"
-                          ],
-                          "children": [
-                            {
-                              "type": "text",
-                              "attr": {
-                                "value": "立即阅读"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "div",
-                      "attr": {},
-                      "classList": [
-                        "bot"
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "attr": {
-                            "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "list-item",
-          "attr": {
-            "type": "loadMore"
-          },
-          "classList": [
-            "load-more"
-          ],
-          "children": [
-            {
-              "type": "progress",
-              "attr": {
-                "type": "circular"
-              }
             },
             {
               "type": "text",
               "attr": {
-                "value": "加载更多"
+                "value": "重磅推荐"
+              },
+              "classList": [
+                "top-mid"
+              ]
+            },
+            {
+              "type": "a",
+              "attr": {
+                "href": "/",
+                "value": "首页"
               }
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "attr": {
+            "scrollpage": "true"
+          },
+          "classList": [
+            "content"
+          ],
+          "children": [
+            {
+              "type": "block",
+              "attr": {},
+              "classList": [
+                "content-block"
+              ],
+              "children": [
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list1.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list2.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list3.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list1.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list2.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list3.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list1.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list2.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "attr": {
+                    "type": "product"
+                  },
+                  "children": [
+                    {
+                      "type": "image",
+                      "attr": {
+                        "src": "../../Common/Images/list3.jpg"
+                      }
+                    },
+                    {
+                      "type": "div",
+                      "attr": {},
+                      "children": [
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "top-list"
+                          ],
+                          "children": [
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "left"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "透视小毒医"
+                                  },
+                                  "classList": [
+                                    "left-title"
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "无敌贱客"
+                                  },
+                                  "classList": [
+                                    "left-fu"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "div",
+                              "attr": {},
+                              "classList": [
+                                "right"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "attr": {
+                                    "value": "立即阅读"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "div",
+                          "attr": {},
+                          "classList": [
+                            "bot"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "attr": {
+                                "value": "王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list-item",
+              "attr": {
+                "type": "loadMore"
+              },
+              "classList": [
+                "load-more"
+              ],
+              "children": [
+                {
+                  "type": "progress",
+                  "attr": {
+                    "type": "circular"
+                  }
+                },
+                {
+                  "type": "text",
+                  "attr": {
+                    "value": "加载更多"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -1765,6 +1776,72 @@ module.exports = {
     }
   ]
 }
+
+/***/ }),
+
+/***/ "./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=f:\\work\\zongheng\\Quick\\node_modules\\hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/List/index.ux?uxType=page":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/List/index.ux?uxType=page ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module, exports, $app_require$){"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _default = {
+  private: {
+    isRefreshing: false
+  },
+  onInit: function onInit() {
+    this.refresh({
+      refreshing: true
+    });
+  },
+  refresh: function refresh(evt) {
+    var _this = this;
+
+    this.isRefreshing = evt.refreshing;
+    console.log(this.isRefreshing);
+    setTimeout(function () {
+      console.log(_this.isRefreshing);
+      _this.isRefreshing = false;
+    }, 2000);
+  }
+};
+exports.default = _default;
+var moduleOwn = exports.default || module.exports;
+var accessors = ['public', 'protected', 'private'];
+
+if (moduleOwn.data && accessors.some(function (acc) {
+  return moduleOwn[acc];
+})) {
+  throw new Error('页面VM对象中的属性data不可与"' + accessors.join(',') + '"同时存在，请使用private替换data名称');
+} else if (!moduleOwn.data) {
+  moduleOwn.data = {};
+  moduleOwn._descriptor = {};
+  accessors.forEach(function (acc) {
+    var accType = _typeof(moduleOwn[acc]);
+
+    if (accType === 'object') {
+      moduleOwn.data = Object.assign(moduleOwn.data, moduleOwn[acc]);
+
+      for (var name in moduleOwn[acc]) {
+        moduleOwn._descriptor[name] = {
+          access: acc
+        };
+      }
+    } else if (accType === 'function') {
+      console.warn('页面VM对象中的属性' + acc + '的值不能是函数，请使用对象');
+    }
+  });
+}}
 
 /***/ }),
 
@@ -1777,8 +1854,13 @@ module.exports = {
 
 var $app_template$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Content/List/index.ux?uxType=page")
 var $app_style$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!less-loader!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Content/List/index.ux?uxType=page")
+var $app_script$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!../../../node_modules/babel-loader?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=f:\\work\\zongheng\\Quick\\node_modules\\hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/List/index.ux?uxType=page")
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
+     $app_script$($app_module$, $app_exports$, $app_require$)
+     if ($app_exports$.__esModule && $app_exports$.default) {
+            $app_module$.exports = $app_exports$.default
+        }
      $app_module$.exports.template = $app_template$
      $app_module$.exports.style = $app_style$
 })

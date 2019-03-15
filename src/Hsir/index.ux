@@ -3,7 +3,7 @@
     <div class="top">
         <image src="../Common/Images/top-icon.png"></image>
         <text class="top-middle">熊猫看书</text>
-        <a class="bookshelf" href="">书架</a>
+        <a class="bookshelf" href="Content/List?bookid='110'">书架</a>
         <div class="magnifier"></div>
     </div>
     <tabs class="bar">
@@ -27,11 +27,11 @@
         </stack>
     </swiper>
     <div class="ban-list">
-        <div>
+        <div onclick="routerLogin">
             <text class="ban-list-top"></text>
             <text class="ban-list-bot">登录</text>
         </div>
-        <div>
+        <div onclick="routerRegister">
             <text class="ban-list-top1"></text>
             <text class="ban-list-bot">注册</text>
         </div>
@@ -57,7 +57,7 @@
                                 <text class="left-title">透视小毒医</text>
                                 <text class="left-fu">无敌贱客</text>
                             </div>
-                            <div class="right">
+                            <div class="right" onclick="routerDetail">
                                 <text>立即阅读</text>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                                 <text class="left-title">透视小毒医</text>
                                 <text class="left-fu">无敌贱客</text>
                             </div>
-                            <div class="right">
+                            <div class="right"  onclick="routerDetail">
                                 <text>立即阅读</text>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                 <text class="left-title">透视小毒医</text>
                                 <text class="left-fu">无敌贱客</text>
                             </div>
-                            <div class="right">
+                            <div class="right"  onclick="routerDetail">
                                 <text>立即阅读</text>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
             </block>
         </list>
         <div class="recommend">
-            <a>更多重磅推荐</a>
+            <a href="Content/List">更多重磅推荐</a>
         </div>
 </div>
 </template>
@@ -290,8 +290,25 @@
     }
   }
 </style>
-<!-- <script>
-// export default {
-    
-// }
-</script> -->
+<script>
+import router from '@system.router';
+
+export default {
+    routerDetail(){
+        router.push({
+            uri: '/Content/Detail'
+        });
+    },
+    routerLogin(){
+        router.push({
+            uri: '/Login/Login'
+        });
+    },
+    routerRegister(){
+        router.push({
+            uri: '/Login/Register'
+        });
+    }
+};
+</script>
+

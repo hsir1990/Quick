@@ -26,7 +26,7 @@
     "debug": true
   },
   "router": {
-    "entry": "Login/Register",
+    "entry": "Hsir",
     "pages": {
       "Hsir": {
         "component": "index"
