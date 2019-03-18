@@ -3,10 +3,10 @@
 <div class="box">
     <div>
         <text class="top-left"></text>
-        <text class="top-mid">重磅推荐</text>
+        <text  onclick="backa"  class="top-mid">重磅推荐</text>
         <a href="/">首页</a>
     </div>
-    <list class="content" scrollpage="true">
+    <list class="content" scrollpage="true"  onscrollbottom="loadMoreData">
             <block class="content-block">
                 <list-item type="product">
                     <image src="../../Common/Images/list1.jpg"></image>
@@ -160,8 +160,8 @@
     .column;
     >div{
         .row;
-        align-items: center;
-        height: 100px;
+        /* align-items: center; */
+        /* height: 100px; */
         .border-bottom(2px, #cbcbcb);
         .top-left{
             width: 60px;
@@ -169,6 +169,7 @@
             .img(url("../../Common/Images/arrow.png"));
             background-size: 20px 40px;
             transform:rotate(180deg);
+            /* transform-origin: -30px -50px; */
         };
         .top-mid{
             flex: 1;
@@ -247,20 +248,37 @@
 
 
 <script>
+import Api from '../../Common/Js/fetch';
 export default {
     private: {
+        // 下拉刷新设置
         isRefreshing: false
     },
     onInit() {
-        this.refresh({refreshing: true})
+        
+        // this.refresh({refreshing: false})
     },
+    // 返回上一页
+    backa(){
+        this.$app.$def.router.back();
+    },
+    // 下拉刷新
     refresh(evt){
+        let _this = this;
         this.isRefreshing = evt.refreshing
         console.log(this.isRefreshing)
         setTimeout(()=>{
             console.log(this.isRefreshing)
+            _this.$app.$def.prompt.showToast({ message: '下拉刷新成功！' });
             this.isRefreshing = false;
         }, 2000)
+    },
+    // 上拉加载更多
+    loadMoreData(){
+        let _this = this;
+        Api.getJson('/list',{}, function(){
+            _this.$app.$def.prompt.showToast({ message: '上拉加载成功！' });
+        })
     }
 }
 </script>

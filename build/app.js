@@ -105,14 +105,23 @@ exports.default = void 0;
 
 var _util = _interopRequireDefault(__webpack_require__(/*! ./util */ "./src/util.js"));
 
+var _system = _interopRequireDefault($app_require$("@app-module/system.prompt"));
+
+var _system2 = _interopRequireDefault($app_require$("@app-module/system.router"));
+
+var _system3 = _interopRequireDefault($app_require$("@app-module/system.storage"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _default = {
   showMenu: _util.default.showMenu,
-  createShortcut: _util.default.createShortcut
+  createShortcut: _util.default.createShortcut,
+  prompt: _system.default,
+  router: _system2.default,
+  storage: _system3.default
 };
 exports.default = _default;
-(exports.default || module.exports).manifest = {"package":"xyz.hsir.quick","name":"老松","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Images/icn/logo-hsir.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"off"},"router":{"entry":"Hsir","pages":{"Hsir":{"component":"index"},"Login/Register":{"component":"index"},"Login/Login":{"component":"index"},"Content/List":{"component":"index"},"Content/Detail":{"component":"index"},"Demo":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"DemoDetail":{"titleBarText":"详情页"},"About":{"menu":false},"Hsir":{"titleBar":false,"fullScreen":true},"Login/Login":{"titleBarText":"登录页"},"Login/Register":{"titleBarText":"注册页"},"Content/List":{"titleBar":false,"fullScreen":true},"Content/Detail":{"titleBar":false,"fullScreen":true}}},"subpackages":[{"name":"fenA","resource":"Login"},{"name":"fenB","resource":"Content"}]};
+(exports.default || module.exports).manifest = {"package":"xyz.hsir.quick","name":"老松","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Images/icn/logo-hsir.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.fetch"},{"name":"system.shortcut"},{"name":"system.storage"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"off"},"router":{"entry":"Hsir","pages":{"Hsir":{"component":"index"},"Login/Register":{"component":"index"},"Login/Login":{"component":"index"},"Content/List":{"component":"index"},"Content/Detail":{"component":"index"},"Demo":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"DemoDetail":{"titleBarText":"详情页"},"About":{"menu":false},"Hsir":{"titleBar":false,"fullScreen":true},"Login/Login":{"titleBarText":"登录页"},"Login/Register":{"titleBarText":"注册页"},"Content/List":{"titleBar":false,"fullScreen":true},"Content/Detail":{"titleBar":false,"fullScreen":true}}},"subpackages":[{"name":"fenA","resource":"Login"},{"name":"fenB","resource":"Content"}]};
 }
 
 /***/ }),
@@ -246,7 +255,7 @@ exports.default = _default;
   else {
     window.createAppHandler = createAppHandler
     // H5注入manifest以获取features
-    global.manifest = {"package":"xyz.hsir.quick","name":"老松","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Images/icn/logo-hsir.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"off"},"router":{"entry":"Hsir","pages":{"Hsir":{"component":"index"},"Login/Register":{"component":"index"},"Login/Login":{"component":"index"},"Content/List":{"component":"index"},"Content/Detail":{"component":"index"},"Demo":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"DemoDetail":{"titleBarText":"详情页"},"About":{"menu":false},"Hsir":{"titleBar":false,"fullScreen":true},"Login/Login":{"titleBarText":"登录页"},"Login/Register":{"titleBarText":"注册页"},"Content/List":{"titleBar":false,"fullScreen":true},"Content/Detail":{"titleBar":false,"fullScreen":true}}},"subpackages":[{"name":"fenA","resource":"Login"},{"name":"fenB","resource":"Content"}]};
+    global.manifest = {"package":"xyz.hsir.quick","name":"老松","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Images/icn/logo-hsir.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.fetch"},{"name":"system.shortcut"},{"name":"system.storage"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"off"},"router":{"entry":"Hsir","pages":{"Hsir":{"component":"index"},"Login/Register":{"component":"index"},"Login/Login":{"component":"index"},"Content/List":{"component":"index"},"Content/Detail":{"component":"index"},"Demo":{"component":"index"},"DemoDetail":{"component":"index"},"About":{"component":"index"}},"widgets":{"CardDemo":{"name":"CardDemo","decription":"快应用卡片展示","component":"index","path":"/CardDemo","features":[]}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Demo":{"titleBarText":"示例页","menu":false},"DemoDetail":{"titleBarText":"详情页"},"About":{"menu":false},"Hsir":{"titleBar":false,"fullScreen":true},"Login/Login":{"titleBarText":"登录页"},"Login/Register":{"titleBarText":"注册页"},"Content/List":{"titleBar":false,"fullScreen":true},"Content/Detail":{"titleBar":false,"fullScreen":true}}},"subpackages":[{"name":"fenA","resource":"Login"},{"name":"fenB","resource":"Content"}]};
   }
 })();
 //# sourceMappingURL=app.js.map

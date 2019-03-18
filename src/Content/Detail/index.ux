@@ -23,10 +23,10 @@
             <text class="tip-mid">第二十一卷_第2360章 授业恩师</text>
             <text class="tip-right">17小时前</text>
         </div>
-        <tabs class="content">
+        <tabs class="content" onchange="activeChage">
             <tab-bar class="con-title">
-                <text class="con-title-left active">简介</text>
-                <text class="con-title-right">目录</text>
+                <text class="con-title-left {{activeIndex == 0? 'active' :''}}" >简介</text>
+                <text class="con-title-right {{activeIndex == 1? 'active' :''}}">目录</text>
             </tab-bar>
             <tab-content class="con-con">
                 <stack  class="con-con-left">
@@ -204,10 +204,7 @@
                 border-right-width: 0px; 
                 background-color: #b8b8b8;
             };
-            .active{
-                color: #ff0020;
-                background-color: #fff;
-            };
+            
             .con-title-right{
                 flex: 1;
                 text-align: center;
@@ -216,6 +213,10 @@
                 line-height: 70px;
                 .border(2px, #b8b8b8);
                 background-color: #b8b8b8;
+            };
+            .active{
+                color: #ff0020;
+                background-color: #fff;
             };
         };
         .con-con{
@@ -239,7 +240,7 @@
             };
             .con-con-right{
                 width: 100%;
-                >div{
+                div{
                     .column;
                     width: 100%;
                     div{
@@ -251,8 +252,18 @@
                     }
                 }
                 
-            };
-        };
+            };  
+        }; 
     }
 }
 </style>
+<script>
+export default {
+    private: {
+        activeIndex: 0
+    },
+    activeChage(evt){
+        this.activeIndex = evt.index;
+    }
+}
+</script>

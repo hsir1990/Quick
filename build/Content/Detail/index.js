@@ -1063,51 +1063,6 @@ module.exports = {
       ]
     }
   },
-  ".box .content .con-title .active": {
-    "color": "#ff0020",
-    "backgroundColor": "#ffffff",
-    "_meta": {
-      "ruleDef": [
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "box"
-        },
-        {
-          "t": "d"
-        },
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "content"
-        },
-        {
-          "t": "d"
-        },
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "con-title"
-        },
-        {
-          "t": "d"
-        },
-        {
-          "t": "a",
-          "n": "class",
-          "i": false,
-          "a": "element",
-          "v": "active"
-        }
-      ]
-    }
-  },
   ".box .content .con-title .con-title-right": {
     "flex": 1,
     "textAlign": "center",
@@ -1162,6 +1117,51 @@ module.exports = {
           "i": false,
           "a": "element",
           "v": "con-title-right"
+        }
+      ]
+    }
+  },
+  ".box .content .con-title .active": {
+    "color": "#ff0020",
+    "backgroundColor": "#ffffff",
+    "_meta": {
+      "ruleDef": [
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "box"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "content"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "con-title"
+        },
+        {
+          "t": "d"
+        },
+        {
+          "t": "a",
+          "n": "class",
+          "i": false,
+          "a": "element",
+          "v": "active"
         }
       ]
     }
@@ -1468,7 +1468,7 @@ module.exports = {
       ]
     }
   },
-  ".box .content .con-con .con-con-right > div": {
+  ".box .content .con-con .con-con-right div": {
     "display": "flex",
     "flexDirection": "column",
     "width": "100%",
@@ -1512,7 +1512,7 @@ module.exports = {
           "v": "con-con-right"
         },
         {
-          "t": "child"
+          "t": "d"
         },
         {
           "t": "t",
@@ -1521,7 +1521,7 @@ module.exports = {
       ]
     }
   },
-  ".box .content .con-con .con-con-right > div div": {
+  ".box .content .con-con .con-con-right div div": {
     "marginLeft": "10px",
     "marginRight": "10px",
     "borderBottomWidth": "1px",
@@ -1572,7 +1572,7 @@ module.exports = {
           "v": "con-con-right"
         },
         {
-          "t": "child"
+          "t": "d"
         },
         {
           "t": "t",
@@ -1785,6 +1785,9 @@ module.exports = {
       "classList": [
         "content"
       ],
+      "events": {
+        "change": "activeChage"
+      },
       "children": [
         {
           "type": "tab-bar",
@@ -1798,19 +1801,14 @@ module.exports = {
               "attr": {
                 "value": "简介"
               },
-              "classList": [
-                "con-title-left",
-                "active"
-              ]
+              "classList": function () {return ['con-title-left', this.activeIndex==0?'active':'']}
             },
             {
               "type": "text",
               "attr": {
                 "value": "目录"
               },
-              "classList": [
-                "con-title-right"
-              ]
+              "classList": function () {return ['con-title-right', this.activeIndex==1?'active':'']}
             }
           ]
         },
@@ -1914,6 +1912,60 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=f:\\work\\zongheng\\Quick\\node_modules\\hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/Detail/index.ux?uxType=page":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/Detail/index.ux?uxType=page ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module, exports, $app_require$){"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _default = {
+  private: {
+    activeIndex: 0
+  },
+  activeChage: function activeChage(evt) {
+    this.activeIndex = evt.index;
+  }
+};
+exports.default = _default;
+var moduleOwn = exports.default || module.exports;
+var accessors = ['public', 'protected', 'private'];
+
+if (moduleOwn.data && accessors.some(function (acc) {
+  return moduleOwn[acc];
+})) {
+  throw new Error('页面VM对象中的属性data不可与"' + accessors.join(',') + '"同时存在，请使用private替换data名称');
+} else if (!moduleOwn.data) {
+  moduleOwn.data = {};
+  moduleOwn._descriptor = {};
+  accessors.forEach(function (acc) {
+    var accType = _typeof(moduleOwn[acc]);
+
+    if (accType === 'object') {
+      moduleOwn.data = Object.assign(moduleOwn.data, moduleOwn[acc]);
+
+      for (var name in moduleOwn[acc]) {
+        moduleOwn._descriptor[name] = {
+          access: acc
+        };
+      }
+    } else if (accType === 'function') {
+      console.warn('页面VM对象中的属性' + acc + '的值不能是函数，请使用对象');
+    }
+  });
+}}
+
+/***/ }),
+
 /***/ "./src/Content/Detail/index.ux?uxType=page":
 /*!*************************************************!*\
   !*** ./src/Content/Detail/index.ux?uxType=page ***!
@@ -1923,8 +1975,13 @@ module.exports = {
 
 var $app_template$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/template-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=template!./src/Content/Detail/index.ux?uxType=page")
 var $app_style$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!less-loader!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/json-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/style-loader.js?index=0&type=style!./node_modules/less-loader/dist/cjs.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=style!./src/Content/Detail/index.ux?uxType=page")
+var $app_script$ = __webpack_require__(/*! !../../../node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!../../../node_modules/babel-loader?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!../../../node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./index.ux?uxType=page */ "./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib/index.js?plugins[]=f:\\work\\zongheng\\Quick\\node_modules\\hap-toolkit\\tools\\packager\\webpack\\loader\\jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/Detail/index.ux?uxType=page")
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
+     $app_script$($app_module$, $app_exports$, $app_require$)
+     if ($app_exports$.__esModule && $app_exports$.default) {
+            $app_module$.exports = $app_exports$.default
+        }
      $app_module$.exports.template = $app_template$
      $app_module$.exports.style = $app_style$
 })

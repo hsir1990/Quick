@@ -3,13 +3,13 @@
     <div class="top">
         <image src="../../Common/Images/icn/logo-hsir.png"></image>
         <div class="content">
-            <input type="text" class="phone"  placeholder="请输入手机号">
+            <input type="text" class="phone"  onchange='youPhone' value="{{phone}}" placeholder="请输入手机号">
             <div class="operation-code">
-                <input type="text" class="code"  placeholder="请输入短信验证码">
+                <input type="text" class="code" placeholder="请输入短信验证码">
                 <text>获取验证码</text>
             </div>
             
-            <input type="button" class="btn" value="登录"> 
+            <input type="button" class="btn" value="登录" onclick="login()"> 
         </div>
     </div>
     <div  class="bot">
@@ -94,3 +94,34 @@
 
 }
 </style>
+
+<script>
+import Api from '../../Common/Js/fetch';
+export default {
+    private: {
+        phone: ''
+    },
+    youPhone({value}){
+        this.phone = value
+    },
+    login(){
+        let _this = this;
+        Api.getJson("/aa",{},function(data){
+            if(data.code == 200){
+                _this.$app.$def.prompt.showToast({ message: _this.phone+'登录成功，并存储了信息!,1.5秒后跳转首页！' });
+                _this.$app.$def.storage.set({
+                    key: 'auth',
+                    phone: _this.phone
+                })
+                setTimeout(() => {
+                    _this.$app.$def.router.push({
+                        uri: '/Hsir'
+                    })
+                },1500)
+            }
+        })
+       
+    }
+}
+</script>
+

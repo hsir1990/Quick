@@ -13,7 +13,13 @@
       "name": "system.router"
     },
     {
+      "name": "system.fetch"
+    },
+    {
       "name": "system.shortcut"
+    },
+    {
+      "name": "system.storage"
     }
   ],
   "permissions": [

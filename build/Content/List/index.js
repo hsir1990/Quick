@@ -120,8 +120,6 @@ module.exports = {
   ".box > div": {
     "display": "flex",
     "flexDirection": "row",
-    "alignItems": "center",
-    "height": "100px",
     "borderBottomWidth": "2px",
     "borderBottomColor": "#cbcbcb",
     "borderStyle": "solid",
@@ -942,6 +940,9 @@ module.exports = {
               "attr": {
                 "value": "重磅推荐"
               },
+              "events": {
+                "click": "backa"
+              },
               "classList": [
                 "top-mid"
               ]
@@ -963,6 +964,9 @@ module.exports = {
           "classList": [
             "content"
           ],
+          "events": {
+            "scrollbottom": "loadMoreData"
+          },
           "children": [
             {
               "type": "block",
@@ -1784,7 +1788,7 @@ module.exports = {
   !*** ./node_modules/hap-toolkit/tools/packager/webpack/loader/script-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/module-loader.js!./node_modules/babel-loader/lib?plugins[]=f:/work/zongheng/Quick/node_modules/hap-toolkit/tools/packager/webpack/loader/jsx-loader.js&comments=false!./node_modules/hap-toolkit/tools/packager/webpack/loader/access-loader.js!./node_modules/hap-toolkit/tools/packager/webpack/loader/fragment-loader.js?index=0&type=script!./src/Content/List/index.ux?uxType=page ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function(module, exports, $app_require$){"use strict";
 
@@ -1793,26 +1797,45 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _fetch = _interopRequireDefault(__webpack_require__(/*! ../../Common/Js/fetch */ "./src/Common/Js/fetch.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 var _default = {
   private: {
     isRefreshing: false
   },
-  onInit: function onInit() {
-    this.refresh({
-      refreshing: true
-    });
+  onInit: function onInit() {},
+  backa: function backa() {
+    this.$app.$def.router.back();
   },
   refresh: function refresh(evt) {
+    var _this2 = this;
+
     var _this = this;
 
     this.isRefreshing = evt.refreshing;
     console.log(this.isRefreshing);
     setTimeout(function () {
-      console.log(_this.isRefreshing);
-      _this.isRefreshing = false;
+      console.log(_this2.isRefreshing);
+
+      _this.$app.$def.prompt.showToast({
+        message: '下拉刷新成功！'
+      });
+
+      _this2.isRefreshing = false;
     }, 2000);
+  },
+  loadMoreData: function loadMoreData() {
+    var _this = this;
+
+    _fetch.default.getJson('/list', {}, function () {
+      _this.$app.$def.prompt.showToast({
+        message: '上拉加载成功！'
+      });
+    });
   }
 };
 exports.default = _default;
@@ -1842,6 +1865,113 @@ if (moduleOwn.data && accessors.some(function (acc) {
     }
   });
 }}
+
+/***/ }),
+
+/***/ "./src/Common/Js/fetch.js":
+/*!********************************!*\
+  !*** ./src/Common/Js/fetch.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _system = _interopRequireDefault($app_require$("@app-module/system.fetch"));
+
+var _system2 = _interopRequireDefault($app_require$("@app-module/system.storage"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var API_ROOT = 'http://47.92.48.144:3100';
+var header = {};
+
+function getAuth() {
+  return new Promise(function (resolve, reject) {
+    _system2.default.get({
+      key: 'auth',
+      success: function success(data) {
+        header.Cookie = data;
+        resolve(true);
+      },
+      fail: function fail(data, code) {
+        reject(false);
+      }
+    });
+  });
+}
+
+function fetchFun(url) {
+  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'get';
+  var CAllBACK = arguments.length > 3 ? arguments[3] : undefined;
+  console.log('url++' + url);
+  console.log('data++' + data);
+  console.log('method++' + method);
+  return new Promise(function (resolve, reject) {
+    _system.default.fetch({
+      url: API_ROOT + url,
+      data: data,
+      header: header,
+      method: method,
+      success: function success(data) {
+        // console.log(data,'1111111111111')
+        // CAllBACK && CAllBACK(data)
+        resolve(CAllBACK && CAllBACK(data));
+      },
+      fail: function fail(data) {
+        reject(data);
+      }
+    });
+  });
+}
+
+function authAbout(url) {
+  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'get';
+  var canSkip = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  return getAuth().then(function (auth) {
+    if (auth || canSkip) {
+      return fetchFun(url, data, method);
+    } else {
+      return new Promise(function (resolve, reject) {
+        reject("请先登陆！");
+      });
+    }
+  });
+}
+
+var _default = {
+  postJson: function postJson(url) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var CAllBACK = arguments.length > 2 ? arguments[2] : undefined;
+    var config = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+
+    if (config.authAbout) {
+      return authAbout(url, data, 'post', config.canSkip);
+    } else {
+      return fetchFun(url, data, 'post', CAllBACK);
+    }
+  },
+  getJson: function getJson(url) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var CAllBACK = arguments.length > 2 ? arguments[2] : undefined;
+    var config = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
+
+    if (config.authAbout) {
+      return authAbout(url, data, 'get', config.canSkip);
+    } else {
+      return fetchFun(url, data, 'get', CAllBACK);
+    }
+  }
+};
+exports.default = _default;
 
 /***/ }),
 
