@@ -378,12 +378,21 @@ export default {
         //     }
         //     })
         // }
-        wifi.scan({
-            success: function() {
-                console.log('scan success')
+        // wifi.scan({
+        //     success: function() {
+        //         console.log('scan success')
+        //     },
+        //     fail: function(data, code) {
+        //         _this.$app.$def.prompt.showToast({ message: `请打开权限, code = ${code}` });
+        //         console.log(`handling fail, code = ${code}`)
+        //     }
+        // })
+        wifi.getConnectedWifi({
+            success: function(data) {
+                _this.$app.$def.prompt.showToast({ message: `handling success: ${data.SSID}` });
+                console.log(`handling success: ${data.SSID}`)
             },
             fail: function(data, code) {
-                _this.$app.$def.prompt.showToast({ message: `请打开权限, code = ${code}` });
                 console.log(`handling fail, code = ${code}`)
             }
         })

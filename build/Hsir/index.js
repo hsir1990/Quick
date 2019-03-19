@@ -2164,15 +2164,15 @@ var _default = {
   wifi: function wifi() {
     var _this = this;
 
-    _system5.default.scan({
-      success: function success() {
-        console.log('scan success');
-      },
-      fail: function fail(data, code) {
+    _system5.default.getConnectedWifi({
+      success: function success(data) {
         _this.$app.$def.prompt.showToast({
-          message: "\u8BF7\u6253\u5F00\u6743\u9650, code = ".concat(code)
+          message: "handling success: ".concat(data.SSID)
         });
 
+        console.log("handling success: ".concat(data.SSID));
+      },
+      fail: function fail(data, code) {
         console.log("handling fail, code = ".concat(code));
       }
     });
