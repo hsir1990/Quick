@@ -1,15 +1,22 @@
+<import name="comp-input" src="../../modules/input"></import>
+<import name="comp-code" src="../../modules/code"></import>
+ 
 <template>
 <div class="box">
     <div class="top">
         <image src="../../Common/Images/icn/logo-hsir.png"></image>
         <div class="content">
-            <input type="text" class="phone"  placeholder="请输入手机号">
+
+            <comp-input id="cinput" phoneprop="{{phoneProp1}}"></comp-input>
+            <comp-code id="ccode" codeprop="{{codeprop1}}"></comp-code>
+
+            <input type="text" class="phone"  onchange='youPhone' value="{{phone}}" placeholder="请输入手机号">
             <div class="operation-code">
-                <input type="text" class="code"  placeholder="请输入短信验证码">
+                <input type="text" class="code" placeholder="请输入短信验证码">
                 <text>获取验证码</text>
             </div>
             
-            <input type="button" class="btn" value="登录"> 
+            <input type="button" class="btn" value="登录" onclick="login()"> 
         </div>
     </div>
     <div  class="bot">
@@ -94,3 +101,63 @@
 
 }
 </style>
+
+<script>
+import Api from '../../Common/Js/fetch';
+export default {
+    private: {
+        phone: '',
+        phoneProp1:'123',
+        codeprop1:''
+    },
+    onReady() {
+        this.vm()
+    },
+    vm(){
+        // 组件之前传值
+        const cinput = this.$vm('cinput');
+        const ccode = this.$vm('ccode');
+
+        cinput.parentVm = this;
+        cinput.nextVm = ccode;
+        ccode.parentVm = this;
+        ccode.previousVm = cinput;
+    },
+    onInit() {
+        this.$on('evtType2', this.evtTypeHandler);
+        this.$on('evtType3', this.evtTypeHandler);
+    },
+     evtTypeHandler(evt){
+        this.$app.$def.prompt.showToast({ message: `子组件：事件响应: `+ evt.type + evt.detail});
+        console.info(`子组件：事件响应: `, evt.type, evt.detail)
+        // 结束事件传递
+        // evt.stop()
+    },
+    youPhone({value}){
+        this.phone = value;
+        this.phoneProp1 = value;
+    },
+    login(){
+        // 父向子传
+        this.$broadcast('evtType1', { params: '额外参数' })
+        let _this = this;
+        Api.getJson("/aa",{},function(data){
+            if(data.code == 200){
+                _this.$app.$def.prompt.showToast({ message: _this.phone+'登录成功，并存储了信息!,1.5秒后跳转首页！' });
+                _this.$app.$def.storage.set({
+                    key: 'auth',
+                    phone: _this.phone
+                })
+                setTimeout(() => {
+                    // _this.$app.$def.router.push({
+                    //     uri: '/Hsir'
+                    // })
+                },1500)
+            }
+        })
+       
+    }
+    
+}
+</script>
+

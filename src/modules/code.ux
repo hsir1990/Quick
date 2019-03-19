@@ -1,0 +1,66 @@
+<template>
+    <div class="operation-code">
+        <input type="text" class="code" value="{{codeprop}}" placeholder="请输入短信验证码" onchange="evtType2Emit">
+        <text onclick="sendMes">获取验证码</text>
+    </div>
+</template>
+<style lang="less" scoped>
+@import '../Common/Less/style.less';
+.operation-code{
+                .row;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                .border-bottom(2px, #e6e6e6);
+                line-height: 40px;
+                .code{
+                    flex: 1;
+                }
+                >text{
+                    font-size: 30px;
+                    color: #df3d3d;
+                    padding-left:30px; 
+                    .border-left(2px, #e6e6e6);
+                }
+            };
+</style>
+<script>
+export default {
+    prop:{
+        codeprop:Number
+        // codeprop:{
+        //     type:Number,
+        //     required: true,
+        //     validator: function (value) {  //函数检查
+        //         // 这个值必须匹配下列字符串中的一个
+        //         return ['success', 'warning', 'danger'].indexOf(value) !== -1
+        //     }
+        // }
+    },
+    onInit() {
+        this.$on('evtType1', this.evtTypeHandler);
+    },
+    evtTypeHandler(evt){
+        this.$app.$def.prompt.showToast({ message: `子组件：事件响应: `+ evt.type + evt.detail});
+        console.info(`子组件：事件响应: `, evt.type, evt.detail)
+        // 结束事件传递
+        // evt.stop()
+    },
+    // 子传父
+    evtType2Emit(){
+        this.$dispatch('evtType2', { params: '额外参数'});
+    },
+
+    // 子传父   子组件通过$emit()触发在节点上绑定的事件来执行父组件的方法
+    evtType3Emit(){
+        this.$emit('evtType3', {params: '额外参数'});
+    },
+
+    // 组件之间传值
+    sendMes(){
+        if(this.previousVm){
+            this.previousVm.mes("组件之间传值");
+            this.previousVm.$emit('customEventInVm2', '兄弟之间通信的消息内容')
+        }
+    }
+}
+</script>

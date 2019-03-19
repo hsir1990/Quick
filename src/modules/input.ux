@@ -1,0 +1,57 @@
+<template>
+<!-- <div> -->
+    <input type="text" class="phone"  onchange="youPhone" value="{{phoneprop}}" placeholder="请输入手机号">
+    <!-- <div><text>{{phoneprop}}</text></div> -->
+  <!-- </div>   -->
+</template>
+<style lang="less" scoped>
+@import '../Common/Less/style.less';
+.phone{
+                height: 110px;
+                line-height: 70px;
+                font-size: 36px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                .border-bottom(2px, #e6e6e6);
+                .img(url("../../Common/Images/close.png"));
+                background-size: 39px 39px;
+                background-position: right center;   
+            };
+</style>
+<script>
+export default {
+    // 父传子,其中props中的值不能有大写
+    props: ["phoneprop"],
+
+    data () {
+      return {
+        upperProp1: this.phoneprop
+      }
+    },
+    onInit() {
+        // this.$app.$def.prompt.showToast({ message: `监听数据变化：`+this.phoneprop });
+        // 在子组件中对数据进行改造，但又不想改动父组件数据时,需要在父组件改变，子组件才能改动触发
+        this.$watch('phoneprop','watchPropsChange');
+
+    },
+    watchPropsChange(newV, oldV){
+        // this.$app.$def.prompt.showToast({ message: `监听数据变化：`+newV+ oldV });
+        console.info(`监听数据变化：`, newV, oldV);
+        this.upperProp1 = newV && newV.toUpperCase()
+    },
+   
+    events:{
+        // 组件间传事件
+        customEventInVm2 (evt) {
+            const now = (new Date).toISOString()
+            this.eventDetail = `${now}: ${evt.detail}`
+             this.$app.$def.prompt.showToast({ message: `监听数据变化：`+this.eventDetail });
+        }
+    },
+    // 组件间传值
+    mes(msg){
+        this.$app.$def.prompt.showToast({ message: `监听数据变化：`+msg });
+    }
+
+}
+</script>

@@ -7,142 +7,22 @@
         <a href="/">首页</a>
     </div>
     <list class="content" scrollpage="true"  onscrollbottom="loadMoreData">
-            <block class="content-block">
+            <block class="content-block" for="(key, val) in listData">
                 <list-item type="product">
-                    <image src="../../Common/Images/list1.jpg"></image>
+                    <image src="{{val.img}}"></image>
                     <div>
                         <div class="top-list">
                             <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
+                                <text class="left-title">{{val.title}}</text>
+                                <text class="left-fu">{{val.author}}</text>
                             </div>
                             <div class="right">
                                 <text>立即阅读</text>
                             </div>
                         </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
+                        <div class="bot"><text>{{val.content}}</text></div>
                     </div>
                 </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list2.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list3.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list1.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list2.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list3.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item>
-                <list-item type="product">
-                    <image src="../../Common/Images/list1.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list2.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item> 
-                <list-item type="product">
-                    <image src="../../Common/Images/list3.jpg"></image>
-                    <div>
-                        <div class="top-list">
-                            <div class="left">
-                                <text class="left-title">透视小毒医</text>
-                                <text class="left-fu">无敌贱客</text>
-                            </div>
-                            <div class="right">
-                                <text>立即阅读</text>
-                            </div>
-                        </div>
-                        <div class="bot"><text>王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人...</text></div>
-                    </div>
-                </list-item>
             </block>
             <!-- 加载更多，type属性自定义命名为loadMore -->
             <list-item type="loadMore" class="load-more">
@@ -252,7 +132,54 @@ import Api from '../../Common/Js/fetch';
 export default {
     private: {
         // 下拉刷新设置
-        isRefreshing: false
+        isRefreshing: false,
+        listData:[{
+            img:"../../Common/Images/list1.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list2.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list3.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list1.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list2.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list3.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list1.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list2.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        },{
+            img:"../../Common/Images/list3.jpg",
+            title:"透视小毒医",
+            author:"无敌贱客",
+            content:"王兵只是个小保安，直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天直到那天他遇到了丧尽天良的师父，从此他的人..."
+        }],
+        vis: true
     },
     onInit() {
         

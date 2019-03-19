@@ -31,7 +31,7 @@
     "logLevel": "off"
   },
   "router": {
-    "entry": "Hsir",
+    "entry": "Login/Register",
     "pages": {
       "Hsir":{
         "component": "index"
