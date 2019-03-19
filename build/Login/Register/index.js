@@ -898,6 +898,8 @@ exports.default = void 0;
 
 var _fetch = _interopRequireDefault(__webpack_require__(/*! ../../Common/Js/fetch */ "./src/Common/Js/fetch.js"));
 
+var _error = _interopRequireDefault(__webpack_require__(/*! ../../Common/Js/error */ "./src/Common/Js/error.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -935,21 +937,9 @@ var _default = {
     this.phoneProp1 = value;
   },
   login: function login() {
-    Function.prototype.bindPage = function (vmInst) {
-      var fn = this;
-      return function () {
-        if (!vmInst) {
-          throw new Error("\u4F7F\u7528\u9519\u8BEF\uFF1A\u8BF7\u4F20\u9012VM\u5BF9\u8C61");
-        }
+    _error.default.bindPageLC();
 
-        if (vmInst.$valid) {
-          return fn.apply(vmInst, arguments);
-        } else {
-          console.info("\u9875\u9762\u9500\u6BC1\u65F6\uFF0C\u4E0D\u6267\u884C\u56DE\u8C03\u51FD\u6570");
-        }
-      };
-    };
-
+    console.log('bindPage0', _error.default.bindPageLC());
     this.$broadcast('evtType1', {
       params: '额外参数'
     });
@@ -969,7 +959,7 @@ var _default = {
 
         setTimeout(function () {}, 1500);
       }
-    }.bindPage(_this));
+    }.bindPage(this));
   }
 };
 exports.default = _default;
@@ -1138,6 +1128,57 @@ $app_define$('@app-component/comp-input', [], function($app_require$, $app_expor
      $app_module$.exports.style = $app_style$
 })
 
+
+/***/ }),
+
+/***/ "./src/Common/Js/error.js":
+/*!********************************!*\
+  !*** ./src/Common/Js/error.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+// export function bindPageLC(){
+//     Function.prototype.bindPage = function(vmInst){
+//         const fn = this;
+//         return function(){
+//             if(!vmInst){
+//                 throw new Error(`使用错误：请传递VM对象`);
+//             }
+//             if(vmInst.$valid){
+//                 return fn.apply(vmInst, arguments)
+//             }else{
+//                 console.info(`页面销毁时，不执行回调函数`)
+//             }
+//         }
+//     }
+// }
+var _default = {
+  bindPageLC: function bindPageLC() {
+    Function.prototype.bindPage = function (vmInst) {
+      var fn = this;
+      return function () {
+        if (!vmInst) {
+          throw new Error("\u4F7F\u7528\u9519\u8BEF\uFF1A\u8BF7\u4F20\u9012VM\u5BF9\u8C61");
+        }
+
+        if (vmInst.$valid) {
+          return fn.apply(vmInst, arguments);
+        } else {
+          console.info("\u9875\u9762\u9500\u6BC1\u65F6\uFF0C\u4E0D\u6267\u884C\u56DE\u8C03\u51FD\u6570");
+        }
+      };
+    };
+  }
+};
+exports.default = _default;
 
 /***/ }),
 

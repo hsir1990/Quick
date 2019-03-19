@@ -20,6 +20,21 @@
     },
     {
       "name": "system.storage"
+    },
+    {
+      "name": "system.share"
+    },
+    {
+      "name": "system.webview"
+    },
+    {
+      "name": "system.barcode"
+    },
+    {
+      "name": "system.wifi"
+    },
+    {
+      "name": "system.file"
     }
   ],
   "permissions": [
@@ -33,7 +48,7 @@
     "debug": true
   },
   "router": {
-    "entry": "Login/Register",
+    "entry": "Hsir",
     "pages": {
       "Hsir": {
         "component": "index"

@@ -8,11 +8,11 @@
     </div>
     <tabs class="bar">
         <tab-bar mode="fixed">
-            <text class="active">首页</text>
-            <text>排行</text>
-            <text>分类</text>
-            <text>男生</text>
-            <text>女生</text>
+            <text onclick="wifi" class="active">wifi</text>
+            <text onclick="file">文件存储</text>
+            <text onclick="erCode">二维码</text>
+            <text onclick="web">网页</text>
+            <text onclick="share">分享</text>
         </tab-bar>
     </tabs>
     <swiper class="swiper-box" autoplay="true">
@@ -37,11 +37,11 @@
         </div>
         <div onclick="bindEv">
             <text class="ban-list-top"></text>
-            <text class="ban-list-bot">登录</text>
+            <text class="ban-list-bot">委托</text>
         </div>
         <div onclick="toasts" id="toast">
             <text class="ban-list-top1"></text>
-            <text class="ban-list-bot">注册</text>
+            <text class="ban-list-bot">子事件</text>
         </div>
     </div>
         <div class="content-tip">
@@ -292,6 +292,11 @@
 </style>
 <script>
 import router from '@system.router';
+import share from '@system.share';
+import webview from '@system.webview';
+import barcode from '@system.barcode';
+import wifi from '@system.wifi';
+import file from '@system.file';
 
 export default {
     routerDetail(){
@@ -315,7 +320,74 @@ export default {
     bindEv(){
         // 注意：通过此类方式的事件不会携带target属性，开发者可以通过detail参数实现
         this.$emitElement('click', {params: 'emitElement'}, 'toast')
+    },
+    share(){
+        share.share({
+            type: 'text/html',
+            data: '<b>bold</b>',
+            success: function(data) {
+                console.log('handling success')
+            },
+            fail: function(data, code) {
+                console.log(`handling fail, code = ${code}`)
+            }
+            })
+    },
+    web(){
+        webview.loadUrl({
+            url: 'https://www.baidu.com/',
+            allowthirdpartycookies: true
+        })
+    },
+    erCode(){
+        let _this = this;
+        barcode.scan({
+            success: function(data) {
+                _this.$app.$def.prompt.showToast({ message: `handling success: ${data.result}` });
+            },
+            fail: function(data, code) {
+                console.log(`handling fail, code = ${code}`)
+            }
+            })
+    },
+    file(){
+        let _this = this;
+        file.move({
+            srcUri: 'internal://cache/path/to/file',
+            dstUri: 'internal://files/path/to/file',
+            success: function(uri) {
+                console.log(`move success: ${uri}`)
+            },
+            fail: function(data, code) {
+                _this.$app.$def.prompt.showToast({ message:`handling fail, code = ${code}` });
+                console.log(`handling fail, code = ${code}`)
+            }
+        })
+    },
+    wifi(){
+        let _this = this;
+        // wifi.connect({
+        //     SSID: '',
+        //     BSSID: '',
+        //     success: function() {
+        //         console.log('connect wifi success')
+        //     },
+        //     fail: function(data, code) {
+        //         _this.$app.$def.prompt.showToast({ message: `请打开权限, code = ${code}` });
+        //         console.log(`请打开权限, code = ${code}`)
+        //     }
+        //     })
+        // }
+        wifi.scan({
+            success: function() {
+                console.log('scan success')
+            },
+            fail: function(data, code) {
+                _this.$app.$def.prompt.showToast({ message: `请打开权限, code = ${code}` });
+                console.log(`handling fail, code = ${code}`)
+            }
+        })
     }
-};
+}
 </script>
 

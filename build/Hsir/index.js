@@ -1524,7 +1524,10 @@ module.exports = {
             {
               "type": "text",
               "attr": {
-                "value": "首页"
+                "value": "wifi"
+              },
+              "events": {
+                "click": "wifi"
               },
               "classList": [
                 "active"
@@ -1533,25 +1536,37 @@ module.exports = {
             {
               "type": "text",
               "attr": {
-                "value": "排行"
+                "value": "文件存储"
+              },
+              "events": {
+                "click": "file"
               }
             },
             {
               "type": "text",
               "attr": {
-                "value": "分类"
+                "value": "二维码"
+              },
+              "events": {
+                "click": "erCode"
               }
             },
             {
               "type": "text",
               "attr": {
-                "value": "男生"
+                "value": "网页"
+              },
+              "events": {
+                "click": "web"
               }
             },
             {
               "type": "text",
               "attr": {
-                "value": "女生"
+                "value": "分享"
+              },
+              "events": {
+                "click": "share"
               }
             }
           ]
@@ -1679,7 +1694,7 @@ module.exports = {
             {
               "type": "text",
               "attr": {
-                "value": "登录"
+                "value": "委托"
               },
               "classList": [
                 "ban-list-bot"
@@ -1707,7 +1722,7 @@ module.exports = {
             {
               "type": "text",
               "attr": {
-                "value": "注册"
+                "value": "子事件"
               },
               "classList": [
                 "ban-list-bot"
@@ -2056,6 +2071,16 @@ exports.default = void 0;
 
 var _system = _interopRequireDefault($app_require$("@app-module/system.router"));
 
+var _system2 = _interopRequireDefault($app_require$("@app-module/system.share"));
+
+var _system3 = _interopRequireDefault($app_require$("@app-module/system.webview"));
+
+var _system4 = _interopRequireDefault($app_require$("@app-module/system.barcode"));
+
+var _system5 = _interopRequireDefault($app_require$("@app-module/system.wifi"));
+
+var _system6 = _interopRequireDefault($app_require$("@app-module/system.file"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -2085,6 +2110,72 @@ var _default = {
     this.$emitElement('click', {
       params: 'emitElement'
     }, 'toast');
+  },
+  share: function share() {
+    _system2.default.share({
+      type: 'text/html',
+      data: '<b>bold</b>',
+      success: function success(data) {
+        console.log('handling success');
+      },
+      fail: function fail(data, code) {
+        console.log("handling fail, code = ".concat(code));
+      }
+    });
+  },
+  web: function web() {
+    _system3.default.loadUrl({
+      url: 'https://www.baidu.com/',
+      allowthirdpartycookies: true
+    });
+  },
+  erCode: function erCode() {
+    var _this = this;
+
+    _system4.default.scan({
+      success: function success(data) {
+        _this.$app.$def.prompt.showToast({
+          message: "handling success: ".concat(data.result)
+        });
+      },
+      fail: function fail(data, code) {
+        console.log("handling fail, code = ".concat(code));
+      }
+    });
+  },
+  file: function file() {
+    var _this = this;
+
+    _system6.default.move({
+      srcUri: 'internal://cache/path/to/file',
+      dstUri: 'internal://files/path/to/file',
+      success: function success(uri) {
+        console.log("move success: ".concat(uri));
+      },
+      fail: function fail(data, code) {
+        _this.$app.$def.prompt.showToast({
+          message: "handling fail, code = ".concat(code)
+        });
+
+        console.log("handling fail, code = ".concat(code));
+      }
+    });
+  },
+  wifi: function wifi() {
+    var _this = this;
+
+    _system5.default.scan({
+      success: function success() {
+        console.log('scan success');
+      },
+      fail: function fail(data, code) {
+        _this.$app.$def.prompt.showToast({
+          message: "\u8BF7\u6253\u5F00\u6743\u9650, code = ".concat(code)
+        });
+
+        console.log("handling fail, code = ".concat(code));
+      }
+    });
   }
 };
 exports.default = _default;
