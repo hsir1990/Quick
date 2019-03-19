@@ -16,7 +16,7 @@
                 <text>获取验证码</text>
             </div>
             
-            <input type="button" class="btn" value="登录" onclick="login()"> 
+            <input type="button" class="btn" value="登录" onclick="login"> 
         </div>
     </div>
     <div  class="bot">
@@ -104,6 +104,7 @@
 
 <script>
 import Api from '../../Common/Js/fetch';
+// import bindPag from '../../Common/Js/error';
 export default {
     private: {
         phone: '',
@@ -111,7 +112,8 @@ export default {
         codeprop1:''
     },
     onReady() {
-        this.vm()
+        this.vm();
+        
     },
     vm(){
         // 组件之前传值
@@ -134,10 +136,24 @@ export default {
         // evt.stop()
     },
     youPhone({value}){
+        
         this.phone = value;
         this.phoneProp1 = value;
     },
     login(){
+       Function.prototype.bindPage = function(vmInst) {
+            const fn = this
+            return function() {
+                if (!vmInst) {
+                throw new Error(`使用错误：请传递VM对象`)
+                }
+                if (vmInst.$valid) {
+                return fn.apply(vmInst, arguments)
+                } else {
+                console.info(`页面销毁时，不执行回调函数`)
+                }
+            }
+        }
         // 父向子传
         this.$broadcast('evtType1', { params: '额外参数' })
         let _this = this;
@@ -149,12 +165,12 @@ export default {
                     phone: _this.phone
                 })
                 setTimeout(() => {
-                    _this.$app.$def.router.push({
-                        uri: '/Hsir'
-                    })
+                    // _this.$app.$def.router.push({
+                    //     uri: '/Hsir'
+                    // })
                 },1500)
             }
-        })
+        }.bindPage(_this))
        
     }
     

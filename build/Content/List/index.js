@@ -1309,7 +1309,16 @@ function authAbout(url) {
       });
     }
   });
-}
+} // // async版
+//  function fetchFun(){
+//     return async ()=>{
+//         const {native} = this.$app.$def;
+//         const res = await native.fetch({
+//             url: 'https://statres.quickapp.cn/quickapp/quickapptool/release/platform/quickapp_platform.json'
+//         })
+//     }
+// }
+
 
 var _default = {
   postJson: function postJson(url) {

@@ -783,7 +783,7 @@ module.exports = {
                 "btn"
               ],
               "events": {
-                "click": function (evt) {this.login(evt)}
+                "click": "login"
               }
             }
           ]
@@ -935,6 +935,21 @@ var _default = {
     this.phoneProp1 = value;
   },
   login: function login() {
+    Function.prototype.bindPage = function (vmInst) {
+      var fn = this;
+      return function () {
+        if (!vmInst) {
+          throw new Error("\u4F7F\u7528\u9519\u8BEF\uFF1A\u8BF7\u4F20\u9012VM\u5BF9\u8C61");
+        }
+
+        if (vmInst.$valid) {
+          return fn.apply(vmInst, arguments);
+        } else {
+          console.info("\u9875\u9762\u9500\u6BC1\u65F6\uFF0C\u4E0D\u6267\u884C\u56DE\u8C03\u51FD\u6570");
+        }
+      };
+    };
+
     this.$broadcast('evtType1', {
       params: '额外参数'
     });
@@ -952,13 +967,9 @@ var _default = {
           phone: _this.phone
         });
 
-        setTimeout(function () {
-          _this.$app.$def.router.push({
-            uri: '/Hsir'
-          });
-        }, 1500);
+        setTimeout(function () {}, 1500);
       }
-    });
+    }.bindPage(_this));
   }
 };
 exports.default = _default;
@@ -1207,7 +1218,16 @@ function authAbout(url) {
       });
     }
   });
-}
+} // // async版
+//  function fetchFun(){
+//     return async ()=>{
+//         const {native} = this.$app.$def;
+//         const res = await native.fetch({
+//             url: 'https://statres.quickapp.cn/quickapp/quickapptool/release/platform/quickapp_platform.json'
+//         })
+//     }
+// }
+
 
 var _default = {
   postJson: function postJson(url) {

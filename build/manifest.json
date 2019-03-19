@@ -28,11 +28,12 @@
     }
   ],
   "config": {
-    "logLevel": "off",
+    "logLevel": "debug",
+    "designWidth": 750,
     "debug": true
   },
   "router": {
-    "entry": "Hsir",
+    "entry": "Login/Register",
     "pages": {
       "Hsir": {
         "component": "index"

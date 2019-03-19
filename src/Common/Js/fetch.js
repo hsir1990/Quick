@@ -56,7 +56,16 @@ function authAbout(url, data = null, method = 'get', canSkip = false){
 }
 
 
-
+// // async版
+//  function fetchFun(){
+//     return async ()=>{
+//         const {native} = this.$app.$def;
+//         const res = await native.fetch({
+//             url: 'https://statres.quickapp.cn/quickapp/quickapptool/release/platform/quickapp_platform.json'
+//         })
+//     }
+    
+// }
 
 export default{
     postJson(url, data = null,CAllBACK, config = {}){
