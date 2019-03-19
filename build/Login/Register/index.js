@@ -952,7 +952,11 @@ var _default = {
           phone: _this.phone
         });
 
-        setTimeout(function () {}, 1500);
+        setTimeout(function () {
+          _this.$app.$def.router.push({
+            uri: '/Hsir'
+          });
+        }, 1500);
       }
     });
   }

@@ -149,9 +149,9 @@ export default {
                     phone: _this.phone
                 })
                 setTimeout(() => {
-                    // _this.$app.$def.router.push({
-                    //     uri: '/Hsir'
-                    // })
+                    _this.$app.$def.router.push({
+                        uri: '/Hsir'
+                    })
                 },1500)
             }
         })

@@ -1665,6 +1665,9 @@ module.exports = {
         {
           "type": "div",
           "attr": {},
+          "events": {
+            "click": "bindEv"
+          },
           "children": [
             {
               "type": "text",
@@ -1686,7 +1689,13 @@ module.exports = {
         },
         {
           "type": "div",
-          "attr": {},
+          "attr": {
+            "id": "toast"
+          },
+          "events": {
+            "click": "toasts"
+          },
+          "id": "toast",
           "children": [
             {
               "type": "text",
@@ -2066,6 +2075,16 @@ var _default = {
     _system.default.push({
       uri: '/Login/Register'
     });
+  },
+  toasts: function toasts(evt) {
+    this.$app.$def.prompt.showToast({
+      message: evt
+    });
+  },
+  bindEv: function bindEv() {
+    this.$emitElement('click', {
+      params: 'emitElement'
+    }, 'toast');
   }
 };
 exports.default = _default;

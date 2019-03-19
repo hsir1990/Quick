@@ -35,11 +35,11 @@
             <text class="ban-list-top1"></text>
             <text class="ban-list-bot">注册</text>
         </div>
-        <div>
+        <div onclick="bindEv">
             <text class="ban-list-top"></text>
             <text class="ban-list-bot">登录</text>
         </div>
-        <div>
+        <div onclick="toasts" id="toast">
             <text class="ban-list-top1"></text>
             <text class="ban-list-bot">注册</text>
         </div>
@@ -308,6 +308,13 @@ export default {
         router.push({
             uri: '/Login/Register'
         });
+    },
+    toasts(evt){
+        this.$app.$def.prompt.showToast({ message: evt});
+    },
+    bindEv(){
+        // 注意：通过此类方式的事件不会携带target属性，开发者可以通过detail参数实现
+        this.$emitElement('click', {params: 'emitElement'}, 'toast')
     }
 };
 </script>
