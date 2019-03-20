@@ -1,10 +1,16 @@
+<import src="../../modules/slot1"></import>
+ 
+
 <template>
     <div class="box">
-        <div class="title-bar">
+        <!-- <div class="title-bar">
             <text class="top-left"></text>
             <text class="top-mid">书籍详情</text>
             <a href="/">书架</a>
-        </div>
+        </div> -->
+        <slot1 bookself="{{bookself}}">
+            <text class="top-mid">书籍详情</text>
+        </slot1>
         <div class="book">
             <image src="../../Common/Images/list1.jpg"></image>
             <div>
@@ -52,7 +58,7 @@
         </tabs>
     </div>
 </template>
-<style lang="less" scoped>
+<style lang="less" >
 @import '../../Common/Less/style.less';
 
 .box{
@@ -260,7 +266,8 @@
 <script>
 export default {
     private: {
-        activeIndex: 0
+        activeIndex: 0,
+        bookself:"书架"
     },
     activeChage(evt){
         this.activeIndex = evt.index;

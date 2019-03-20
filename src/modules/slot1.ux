@@ -1,0 +1,44 @@
+<template>
+    <div class="title-bar">
+        <text class="top-left"></text>
+        <slot></slot>
+        <!-- <text class="top-mid">书籍详情</text> -->
+        <a href="/">{{bookself}}</a>
+    </div>
+</template>
+<!-- <style lang="less">
+需要打开scope，才能使用公用的样式
+@import '../Common/Less/style.less';
+.title-bar{
+        .row;
+        align-items: center;
+        height: 100px;
+        .border-bottom(2px, #cbcbcb);
+        background-color: #f7f7f7;
+        .top-left{
+            width: 60px;
+            height: 100px;
+            .img(url("../../Common/Images/arrow.png"));
+            background-size: 20px 40px;
+            transform:rotate(180deg);
+        };
+        .top-mid{
+            flex: 1;
+                text-align: center;
+                color: #333;
+                font-size: 34px;
+        };
+        a{
+            color: #999;
+            font-size: 24px;
+            text-align: center;
+            margin-right:20px;
+        };
+    };
+</style> -->
+<script>
+export default {
+    prop:['bookself']
+}
+</script>
+
