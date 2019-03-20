@@ -126,6 +126,15 @@ export default {
         ccode.previousVm = cinput;
     },
     onInit() {
+        // 页面之间相互通讯,如果不销毁，会造成反复传智监听
+        const REGISTER = new BroadcastChannel('channel1');
+        REGISTER.postMessage('注册页面之间传智!');
+        REGISTER.onmessage = function(event){
+            console.log(event.data,'++++++++=');
+            
+        }
+
+
         this.$on('evtType2', this.evtTypeHandler);
         this.$on('evtType3', this.evtTypeHandler);
     },
@@ -155,9 +164,9 @@ export default {
                     phone: _this.phone
                 })
                 setTimeout(() => {
-                    // _this.$app.$def.router.push({
-                    //     uri: '/Hsir'
-                    // })
+                    _this.$app.$def.router.push({
+                        uri: '/Hsir'
+                    })
                 },1500)
             }
         }.bindPage(this))

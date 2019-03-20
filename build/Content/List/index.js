@@ -1280,7 +1280,7 @@ function fetchFun(url) {
   console.log('method++' + method);
   return new Promise(function (resolve, reject) {
     _system.default.fetch({
-      url: API_ROOT + url,
+      url: "".concat(API_ROOT) + url,
       data: data,
       header: header,
       method: method,

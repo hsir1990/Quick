@@ -27,7 +27,7 @@ function fetchFun(url, data =null, method = 'get', CAllBACK){
     console.log('method++' + method);
     return new Promise((resolve, reject) => {
         fetch.fetch({
-            url: API_ROOT + url,
+            url: `${API_ROOT}` + url,
             data: data,
             header: header,
             method: method,

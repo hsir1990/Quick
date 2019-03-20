@@ -719,6 +719,9 @@ var _default = {
         }, 1500);
       }
     });
+  },
+  onInit: function onInit() {
+    var LOGIN = new BroadcastChannel('channel1');
   }
 };
 exports.default = _default;
@@ -799,7 +802,7 @@ function fetchFun(url) {
   console.log('method++' + method);
   return new Promise(function (resolve, reject) {
     _system.default.fetch({
-      url: API_ROOT + url,
+      url: "".concat(API_ROOT) + url,
       data: data,
       header: header,
       method: method,

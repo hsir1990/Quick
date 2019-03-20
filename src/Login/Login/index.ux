@@ -121,6 +121,9 @@ export default {
             }
         })
        
+    },
+    onInit() {
+        const LOGIN = new BroadcastChannel('channel1')
     }
 }
 </script>

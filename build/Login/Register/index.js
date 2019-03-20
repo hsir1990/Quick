@@ -922,6 +922,13 @@ var _default = {
     ccode.previousVm = cinput;
   },
   onInit: function onInit() {
+    var REGISTER = new BroadcastChannel('channel1');
+    REGISTER.postMessage('注册页面之间传智!');
+
+    REGISTER.onmessage = function (event) {
+      console.log(event.data, '++++++++=');
+    };
+
     this.$on('evtType2', this.evtTypeHandler);
     this.$on('evtType3', this.evtTypeHandler);
   },
@@ -957,7 +964,11 @@ var _default = {
           phone: _this.phone
         });
 
-        setTimeout(function () {}, 1500);
+        setTimeout(function () {
+          _this.$app.$def.router.push({
+            uri: '/Hsir'
+          });
+        }, 1500);
       }
     }.bindPage(this));
   }
@@ -1230,7 +1241,7 @@ function fetchFun(url) {
   console.log('method++' + method);
   return new Promise(function (resolve, reject) {
     _system.default.fetch({
-      url: API_ROOT + url,
+      url: "".concat(API_ROOT) + url,
       data: data,
       header: header,
       method: method,

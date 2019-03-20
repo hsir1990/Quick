@@ -2176,6 +2176,15 @@ var _default = {
         console.log("handling fail, code = ".concat(code));
       }
     });
+  },
+  onInit: function onInit() {
+    var pageIndex = new BroadcastChannel('channel1');
+    pageIndex.postMessage('收到！');
+
+    pageIndex.onmessage = function (event) {
+      console.log(event.data, '-------------------------------------');
+      pageIndex.postMessage('收到！');
+    };
   }
 };
 exports.default = _default;
